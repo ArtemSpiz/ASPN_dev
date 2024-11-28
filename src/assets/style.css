@@ -10,6 +10,15 @@ html {
 	scroll-behavior: smooth;
 }
 
+html button {
+	border: none;
+}
+
+html button:hover {
+	box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.6); /* Інтенсивна, чітка тінь */
+	transition: box-shadow 0.3s ease; /* Гладкий перехід */
+}
+
 .choose-img-mob,
 .element-title-mob,
 .guide-point-subtitle-mob {
@@ -66,7 +75,7 @@ html {
 		transparent 100%
 	);
 	filter: blur(100px);
-	z-index: -1;
+	z-index: -2;
 }
 
 .main-header {
@@ -91,6 +100,23 @@ html {
 	font-family: 'Host Grotesk';
 	font-size: 16px;
 	font-weight: 400;
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.header-text::after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #e1752e;
+	transition: width 0.3s ease;
+}
+
+.header-text:hover::after {
+	width: 90%;
 }
 
 .header-btn {
@@ -139,6 +165,11 @@ html {
 	font-style: normal;
 	font-weight: 500;
 	letter-spacing: -1.44px;
+	transition: transform 0.6s ease;
+}
+
+.main-title:hover {
+	transform: scale(1.02);
 }
 
 .main-title2 {
@@ -157,6 +188,10 @@ html {
 	font-weight: 400;
 	padding-top: 16px;
 	padding-bottom: 50px;
+}
+
+.main-subtitle:hover {
+	text-shadow: 0px 4px 10px rgba(240, 138, 53, 0.5);
 }
 
 .main-button {
@@ -196,6 +231,7 @@ html {
 .main-img {
 	width: 100%;
 	height: 100%;
+	z-index: -1;
 }
 
 .cooperation {
@@ -262,7 +298,7 @@ html {
 .logos-wrapper span {
 	display: flex;
 	justify-content: space-around;
-	animation: scroll-logos 10s linear infinite;
+	animation: scroll-logos 20s linear infinite;
 	width: 100%;
 }
 
@@ -290,7 +326,7 @@ html {
 .logos-wrapper-bot span {
 	display: flex;
 	justify-content: space-around;
-	animation: scroll-logos-bot 10s linear infinite;
+	animation: scroll-logos-bot 20s linear infinite;
 	width: 100%;
 }
 
@@ -380,13 +416,6 @@ html {
 
 .element {
 	position: relative;
-}
-
-.element1,
-.element2,
-.element3,
-.element4,
-.element5 {
 	padding-left: 24px;
 }
 
@@ -630,7 +659,6 @@ html {
 .guide-points {
 	display: flex;
 	flex-direction: column;
-	padding-top: 60px;
 	justify-content: center;
 }
 
@@ -953,7 +981,7 @@ html {
 .choose-img {
 	width: 100%;
 	height: 100vh;
-	size: cover;
+	object-fit: cover;
 }
 
 .choose-sup-title {
@@ -1211,6 +1239,10 @@ html {
 	width: 100%;
 }
 
+.questions-request {
+	width: 60%;
+}
+
 .questions-title-image {
 	flex-shrink: 0;
 	display: flex;
@@ -1308,7 +1340,10 @@ html {
 	justify-content: space-between;
 	align-items: center;
 	position: relative;
-	padding: 32px 0;
+	padding-top: 32px;
+}
+
+.first {
 }
 
 .last {
@@ -1329,7 +1364,7 @@ html {
 	justify-content: center;
 }
 
-.request::before {
+.before::before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -1573,6 +1608,23 @@ html {
 	font-size: 16px;
 	font-weight: 500;
 	line-height: 24px;
+	transition: color 0.3s ease, text-decoration 0.3s ease;
+	position: relative;
+}
+
+.footer-link::after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background-color: #e1752e;
+	transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+	width: 100%;
 }
 
 .footer-middle-info {
@@ -1636,6 +1688,9 @@ html {
 }
 
 @media (max-width: 1300px) {
+	.questions-request {
+		width: 80%;
+	}
 	.stream-right {
 		max-width: 50%;
 	}
@@ -1651,10 +1706,6 @@ html {
 	.future-title,
 	.future-text {
 		white-space: nowrap;
-	}
-
-	.choose-img {
-		object-fit: contain;
 	}
 
 	.future-title {
@@ -1893,6 +1944,14 @@ html {
 		grid-template-columns: 200px 200px 200px;
 		gap: 30px;
 		display: grid;
+		justify-self: auto auto;
+		justify-content: center;
+	}
+
+	.element5,
+	.element4 {
+		justify-self: center;
+		width: 0;
 	}
 
 	.future-container {
@@ -1938,6 +1997,9 @@ html {
 }
 
 @media (max-width: 1000px) {
+	.questions-request {
+		width: 90%;
+	}
 	.experts-logos div {
 		width: 250%;
 	}
@@ -2125,6 +2187,9 @@ html {
 }
 
 @media (max-width: 800px) {
+	.questions-request {
+		width: 100%;
+	}
 	.experts-logos div {
 		width: 300%;
 	}
@@ -2195,6 +2260,12 @@ html {
 		justify-content: center;
 	}
 
+	.element5,
+	.element4 {
+		justify-self: normal;
+		width: 100%;
+	}
+
 	.discover-subtitle,
 	.discover-title {
 		display: none;
@@ -2261,6 +2332,11 @@ html {
 }
 
 @media (max-width: 700px) {
+	.questions-request {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+	}
 	.footer-title {
 		font-size: 20px;
 		display: flex;
@@ -2276,7 +2352,7 @@ html {
 	}
 
 	.guide-point-subtitle-comp,
-	.questions-text,
+	.questions-text-comp,
 	.footer-middle-button {
 		display: none;
 	}
@@ -2335,13 +2411,12 @@ html {
 		display: none;
 	}
 
-	.choose-image {
-		width: 100%;
-	}
-
 	.choose-img-mob {
 		display: block;
 		width: 100%;
+		object-fit: cover;
+		height: 400px;
+		object-position: top;
 	}
 
 	.choose-title {
@@ -2360,6 +2435,14 @@ html {
 	.choose-right {
 		width: 90%;
 	}
+
+	.choose-image {
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		align-items: center;
+	}
+
 	.questions-help {
 		flex-direction: column;
 		gap: 8px;
@@ -2387,11 +2470,20 @@ html {
 	.help {
 		padding: 20px 0px;
 	}
+
+	.request {
+		align-items: start;
+	}
 }
 
 @media (max-width: 500px) {
 	.main-img {
 		display: none;
+	}
+
+	.element5,
+	.element4 {
+		width: 0;
 	}
 
 	.element-title-mob,
@@ -2404,6 +2496,7 @@ html {
 		margin-top: -100px;
 		object-fit: cover;
 		height: auto;
+		z-index: -1;
 	}
 	.experts-logos div {
 		width: 500%;
