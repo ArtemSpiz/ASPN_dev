@@ -2492,6 +2492,17 @@ html button:hover {
 }
 
 @media (max-width: 500px) {
+	.footer-container {
+		gap: 48px;
+		padding: 60px 0px 40px 0px;
+	}
+	.footer-link::after {
+		position: relative;
+	}
+
+	.footer-middle-links {
+		gap: 24px;
+	}
 	.choose-point-num {
 		font-size: 80px;
 	}
