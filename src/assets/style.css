@@ -511,7 +511,6 @@ html button:hover {
 	padding: 80px 0px;
 	flex-direction: column;
 	justify-content: flex-end;
-	align-items: center;
 	gap: 60px;
 }
 
@@ -582,6 +581,68 @@ html button:hover {
 	100% {
 		transform: translateX(-50%);
 	}
+}
+
+.experts-fotos {
+	display: flex;
+	gap: 12px;
+	padding: 0px 80px;
+	padding-top: 60px;
+	overflow-x: scroll;
+	overflow-y: hidden;
+	align-items: start;
+	scroll-behavior: smooth;
+	scrollbar-width: none;
+}
+
+.experts-foto {
+	width: 220px;
+	flex-shrink: 0;
+	height: 260px;
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	gap: 12px;
+	border-radius: 32px;
+	border-right: 1px solid #f08a35;
+	border-left: 1px solid #f08a35;
+	background: #fff;
+}
+
+.expert-foto-image {
+	border-radius: 24px;
+	background: #000;
+	justify-content: center;
+	display: flex;
+}
+
+.experts-foto-img-black {
+	height: 200px;
+	object-fit: contain;
+}
+
+.experts-foto-img {
+	border-radius: 24px;
+	width: 100%;
+}
+
+.other-color {
+	border-radius: 24px;
+	background: #f6f6f6;
+}
+
+.experts-name {
+	color: #0a0601;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 130%;
+}
+
+.experts-spec {
+	color: #5a5855;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 130%;
 }
 
 .guide {
@@ -1691,6 +1752,9 @@ html button:hover {
 }
 
 @media (max-width: 1300px) {
+	.experts-fotos {
+		padding: 60px 50px 0px 50px;
+	}
 	.questions-request {
 		width: 80%;
 	}
@@ -2190,6 +2254,7 @@ html button:hover {
 }
 
 @media (max-width: 800px) {
+	.team-foto-img-mob,
 	.questions-request {
 		width: 100%;
 	}
@@ -2200,6 +2265,7 @@ html button:hover {
 	.logos-wrapper {
 		width: 150%;
 	}
+
 	.stream-imgRight,
 	.stream-imgLeft {
 		display: none;
@@ -2335,6 +2401,12 @@ html button:hover {
 }
 
 @media (max-width: 700px) {
+	.experts-fotos {
+		padding: 60px 16px 0px 16px;
+	}
+	.experts-logos div {
+		width: 400%;
+	}
 	.choose-point-num {
 		font-size: 100px;
 	}
@@ -2492,6 +2564,23 @@ html button:hover {
 }
 
 @media (max-width: 500px) {
+	.experts {
+		padding-bottom: 0px;
+	}
+	.experts-foto-img {
+		height: 180px;
+	}
+
+	.experts-foto {
+		width: 200px;
+		height: 230px;
+	}
+	.experts-subtile {
+		padding-bottom: 40px;
+	}
+	.experts-fotos {
+		padding: 40px 16px 0px 16px;
+	}
 	.footer-container {
 		gap: 48px;
 		padding: 60px 0px 40px 0px;
