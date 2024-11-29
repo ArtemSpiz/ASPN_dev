@@ -639,6 +639,10 @@ html button:hover {
 }
 
 .guide-btn {
+	color: var(--Primary-950, #401c0a);
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 24px;
 	display: flex;
 	padding: 16px 32px;
 	justify-content: center;
@@ -1338,7 +1342,6 @@ html button:hover {
 .request {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
 	position: relative;
 	padding-top: 32px;
 }
@@ -1998,7 +2001,7 @@ html button:hover {
 
 @media (max-width: 1000px) {
 	.questions-request {
-		width: 90%;
+		width: 100%;
 	}
 	.experts-logos div {
 		width: 250%;
@@ -2332,6 +2335,15 @@ html button:hover {
 }
 
 @media (max-width: 700px) {
+	.choose-point-num {
+		font-size: 100px;
+	}
+	.guide-container {
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 	.questions-request {
 		align-items: center;
 		display: flex;
@@ -2426,6 +2438,9 @@ html button:hover {
 	.choose-container {
 		align-items: start;
 		white-space: nowrap;
+		align-items: center;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.choose-right {
@@ -2433,7 +2448,7 @@ html button:hover {
 	}
 
 	.choose-right {
-		width: 90%;
+		width: auto;
 	}
 
 	.choose-image {
@@ -2477,6 +2492,18 @@ html button:hover {
 }
 
 @media (max-width: 500px) {
+	.choose-point-num {
+		font-size: 80px;
+	}
+	.guide-point-top::after {
+		width: 100%;
+	}
+	.guide-numb {
+		padding-right: 14px;
+	}
+	.choose-right {
+		width: 90%;
+	}
 	.main-img {
 		display: none;
 	}
@@ -2604,5 +2631,9 @@ html button:hover {
 
 	.team-foto {
 		padding: 24px 0px;
+	}
+
+	.choose-point-subtitile {
+		font-size: 18px;
 	}
 }
