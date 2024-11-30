@@ -2692,6 +2692,7 @@ html button:hover {
 	}
 
 	.future-container {
+		align-items: start;
 		padding: 60px 16px;
 	}
 
